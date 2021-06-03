@@ -11,7 +11,7 @@ order by ArtistName; */
 s.Title,
 a.ArtistName
 FROM Song s
-INNER JOIN Artist a on s.ArtistId = a.Id */
+LEFT JOIN Artist a on s.ArtistId = a.Id */
 
 --Write a SELECT query that lists all the Artists that have a Pop Album
 /* SELECT distinct
@@ -19,14 +19,21 @@ INNER JOIN Artist a on s.ArtistId = a.Id */
 a.ArtistName
 FROM Artist a
 LEFT JOIN Album al on al.ArtistId = a.id
-INNER JOIN Genre g on al.GenreId = g.id
+LEFT JOIN Genre g on al.GenreId = g.id
 WHERE g.Name = 'Pop'; */
 
 --Write a SELECT query that lists all the Artists that have a Jazz or Rock Album
-SELECT distinct
+/*SELECT distinct
 --distict restricts duplicate results from showing
 a.ArtistName
 FROM Artist a
 LEFT JOIN Album al on al.ArtistId = a.id
 INNER JOIN Genre g on al.GenreId = g.id
-WHERE g.Name = 'Rock';
+WHERE g.Name = 'Rock' OR g.Name = 'Jazz';*/
+
+--Write a SELECT statement that lists the Albums with no songs
+/* SELECT 
+al.Title
+From Album al
+LEFT JOIN Song s on s.AlbumId = al.Id
+WHERE s.SongLength is NULL; */
