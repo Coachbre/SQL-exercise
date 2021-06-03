@@ -46,4 +46,9 @@ VALUES ('Me', 2021); */
 --Using the INSERT statement, add one, or more, albums by your artist to the Album table.
 /*INSERT INTO 
 Album (Title, ReleaseDate, AlbumLength, Label, ArtistId, GenreId)
-Values ('My Song', 2021, 50, 'Something', 35, 7); */
+VALUES ('My Song', 2021, 50, 'Something', 35, 7); */
+
+--Using the INSERT statement, add some songs that are on that album to the Song table
+INSERT INTO
+Song (Title, SongLength, ReleaseDate, GenreId, ArtistId, AlbumId)
+VALUES ('My Song version 1', 25, 2011, 11, 35, 27)
