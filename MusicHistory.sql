@@ -20,4 +20,13 @@ a.ArtistName
 FROM Artist a
 LEFT JOIN Album al on al.ArtistId = a.id
 INNER JOIN Genre g on al.GenreId = g.id
-WHERE g.Name = 'Rock'; */
+WHERE g.Name = 'Pop'; */
+
+--Write a SELECT query that lists all the Artists that have a Jazz or Rock Album
+SELECT distinct
+--distict restricts duplicate results from showing
+a.ArtistName
+FROM Artist a
+LEFT JOIN Album al on al.ArtistId = a.id
+INNER JOIN Genre g on al.GenreId = g.id
+WHERE g.Name = 'Rock';
