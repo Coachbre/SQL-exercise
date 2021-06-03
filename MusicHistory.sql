@@ -41,5 +41,9 @@ WHERE s.SongLength is NULL; */
 --Using the INSERT statement, add one of your favorite artists to the Artist table.
 /* INSERT INTO
 Artist (ArtistName, YearEstablished)
-VALUES ('Beyonce', 1999); */
+VALUES ('Me', 2021); */
 
+--Using the INSERT statement, add one, or more, albums by your artist to the Album table.
+/*INSERT INTO 
+Album (Title, ReleaseDate, AlbumLength, Label, ArtistId, GenreId)
+Values ('My Song', 2021, 50, 'Something', 35, 7); */
