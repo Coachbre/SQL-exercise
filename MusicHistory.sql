@@ -37,3 +37,9 @@ al.Title
 From Album al
 LEFT JOIN Song s on s.AlbumId = al.Id
 WHERE s.SongLength is NULL; */
+
+--Using the INSERT statement, add one of your favorite artists to the Artist table.
+/* INSERT INTO
+Artist (ArtistName, YearEstablished)
+VALUES ('Beyonce', 1999); */
+
