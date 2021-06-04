@@ -87,3 +87,10 @@ GROUP BY Artist.ArtistName; */
 FROM Genre
 LEFT JOIN Song ON Song.GenreId = Genre.id
 GROUP BY Genre.Name; */
+
+--Write a SELECT query that lists the Artists that have put out records on more than one record label. Hint: When using GROUP BY instead of using a WHERE clause, use the HAVING keyword
+/* SELECT COUNT (DISTINCT Album.Label), Artist.ArtistName
+--DISTINCT can be used on anything
+FROM Album
+LEFT JOIN Artist ON Artist.id = Album.ArtistId
+GROUP BY Artist.ArtistName HAVING COUNT (DISTINCT Album.Label) > 1; */
