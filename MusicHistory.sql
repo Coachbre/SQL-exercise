@@ -51,4 +51,20 @@ VALUES ('My Song', 2021, 50, 'Something', 35, 7); */
 --Using the INSERT statement, add some songs that are on that album to the Song table
 /* INSERT INTO
 Song (Title, SongLength, ReleaseDate, GenreId, ArtistId, AlbumId)
-VALUES ('My Song version 1', 25, 2011, 11, 35, 27) */
+VALUES ('My Song version 1', 25, 2011, 11, 35, 27) 
+
+INSERT INTO
+Song (Title, SongLength, ReleaseDate, GenreId, ArtistId, AlbumId)
+VALUES ('My Song PART 5', 400, 2013, 11, 34, 27),
+('My Song PART 8', 490, 2018, 11, 34, 27); */
+
+--Write a SELECT query that provides the song titles, album title, and artist name for all of the data you just entered in. 
+--Use the LEFT JOIN keyword sequence to connect the tables, and the WHERE keyword to filter the results to the album and artist you added.
+/* SELECT 
+Album.Title,
+Song.Title,
+Artist.ArtistName
+From Album
+LEFT JOIN Song ON Song.AlbumId = Album.id
+LEFT JOIN Artist ON Artist.id = Album.ArtistId
+WHERE Artist.ArtistName = 'Me'; */
